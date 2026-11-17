@@ -1,0 +1,272 @@
+/* ---------- Color scheme ---------- */
+:root {
+  --primary: #2b4c7e;
+  --primary-dark: #1d3557;
+  --accent: #f4a261;
+  --bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --text: #333333;
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--primary-dark);
+  margin-top: 0;
+}
+
+h1 { font-size: 2.6rem; }
+h2 { font-size: 2rem; border-bottom: 3px solid var(--accent); padding-bottom: 8px; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; font-style: italic; }
+h6 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ---------- Navigation bar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 14px 40px;
+  background-color: var(--primary-dark);
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.logo .accent {
+  color: var(--accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 8px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 70px 40px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #ffffff;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.intro {
+  font-size: 1.15rem;
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 6px solid var(--accent);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+/* ---------- Buttons ---------- */
+.btn,
+button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--accent);
+  color: var(--primary-dark);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #e07a2f;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  margin: 30px 0;
+  padding: 30px;
+  border: 1px solid #d6dde6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.two-columns {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.two-columns .card {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border: 1px solid #d6dde6;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #d6dde6;
+}
+
+th {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f7fa;
+}
+
+tbody tr:hover {
+  background-color: #fdebd8;
+}
+
+/* ---------- Form ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 14px 0 6px;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+input,
+textarea {
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px solid #c5cfdb;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+form button {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    padding: 12px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero {
+    padding: 40px 20px;
+    text-align: center;
+  }
+}
